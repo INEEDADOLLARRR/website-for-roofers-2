@@ -1,0 +1,10 @@
+# Verrazano Roofing - robots.txt
+# Allow all legitimate crawlers
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_internal/
+
+# Sitemap location
+Sitemap: https://verrazanoroofing.com/sitemap.xml
