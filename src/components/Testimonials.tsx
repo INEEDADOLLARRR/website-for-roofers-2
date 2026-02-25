@@ -48,17 +48,17 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section aria-label="Client testimonials" className="py-28 bg-brand-black text-brand-white overflow-hidden">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
+    <section aria-label="Client testimonials" className="py-16 md:py-28 bg-brand-black text-brand-white overflow-hidden">
+      <div className="container mx-auto px-5 md:px-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-12 md:mb-20">
           <div className="max-w-2xl">
             <motion.p
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-brand-blue font-semibold tracking-[0.2em] text-[10px] md:text-xs uppercase mb-5 flex items-center gap-4"
+              className="text-brand-blue font-semibold tracking-[0.2em] text-[10px] uppercase mb-4 flex items-center gap-3"
             >
-              <span className="w-8 h-[1px] bg-brand-blue" />
+              <span className="w-6 h-[1px] bg-brand-blue" />
               Client Endorsements
             </motion.p>
             <motion.h2
@@ -66,7 +66,7 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="font-display text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight"
+              className="font-display text-2xl md:text-4xl lg:text-5xl font-medium tracking-tight"
             >
               Trusted by visionaries.
             </motion.h2>
@@ -76,40 +76,41 @@ export function Testimonials() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-brand-silver/50 max-w-sm font-light leading-relaxed text-sm"
+            className="hidden md:block text-brand-silver/50 max-w-sm font-light leading-relaxed text-sm"
           >
-            We don't just build roofs; we secure legacies. Hear from the owners and architects who demand nothing but the absolute best.
+            We don't just build roofs; we secure legacies.
           </motion.p>
         </div>
       </div>
 
       <div className="relative w-full">
-        <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-brand-black to-transparent z-20 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-brand-black to-transparent z-20 pointer-events-none" />
+        {/* Edge fades */}
+        <div className="absolute left-0 top-0 bottom-0 w-10 md:w-24 bg-gradient-to-r from-brand-black to-transparent z-20 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-10 md:w-24 bg-gradient-to-l from-brand-black to-transparent z-20 pointer-events-none" />
 
         <motion.div
-          className="flex gap-6 px-4 w-max"
+          className="flex gap-4 md:gap-6 px-3 md:px-4 w-max"
           animate={{ x: ["0%", "-50%"] }}
-          transition={{ repeat: Infinity, ease: "linear", duration: 60 }}
+          transition={{ repeat: Infinity, ease: "linear", duration: 50 }}
         >
           {[...testimonials, ...testimonials].map((testimonial, i) => (
             <article
               key={i}
-              className="flex flex-col p-7 glass-panel rounded-xl border-brand-white/5 hover:border-brand-white/10 transition-colors duration-300 w-[300px] md:w-[380px] shrink-0 hover:bg-brand-white/[0.03] group"
+              className="flex flex-col p-5 md:p-7 glass-panel rounded-xl hover:border-brand-white/10 transition-colors duration-300 w-[260px] sm:w-[300px] md:w-[360px] shrink-0 hover:bg-brand-white/[0.03] group"
             >
-              <div className="flex gap-0.5 mb-5" aria-label={`${testimonial.rating} out of 5 stars`}>
+              <div className="flex gap-0.5 mb-4" aria-label={`${testimonial.rating} out of 5 stars`}>
                 {[...Array(testimonial.rating)].map((_, j) => (
-                  <Star key={j} className="w-3 h-3 text-brand-yellow fill-brand-yellow" aria-hidden="true" />
+                  <Star key={j} className="w-2.5 h-2.5 text-brand-yellow fill-brand-yellow" aria-hidden="true" />
                 ))}
               </div>
 
-              <blockquote className="flex-1 mb-8">
-                <p className="font-display text-base leading-relaxed text-brand-silver/70 font-light group-hover:text-brand-white/80 transition-colors duration-300">
+              <blockquote className="flex-1 mb-6">
+                <p className="font-display text-sm md:text-base leading-relaxed text-brand-silver/70 font-light group-hover:text-brand-white/80 transition-colors duration-300">
                   "{testimonial.content}"
                 </p>
               </blockquote>
 
-              <div className="border-t border-brand-silver/5 pt-5 flex items-center gap-3">
+              <div className="border-t border-brand-silver/5 pt-4 flex items-center gap-3">
                 <img
                   src={testimonial.avatarImage}
                   alt={`${testimonial.name}, ${testimonial.role}`}
@@ -117,11 +118,11 @@ export function Testimonials() {
                   height={40}
                   loading="lazy"
                   decoding="async"
-                  className="w-10 h-10 rounded-full object-cover"
+                  className="w-9 h-9 md:w-10 md:h-10 rounded-full object-cover"
                 />
                 <div>
-                  <p className="font-medium text-brand-white uppercase tracking-wider text-[10px] mb-0.5">{testimonial.name}</p>
-                  <p className="text-brand-silver/40 text-[9px] uppercase tracking-widest">{testimonial.role}</p>
+                  <p className="font-medium text-brand-white uppercase tracking-wider text-[9px] md:text-[10px] mb-0.5">{testimonial.name}</p>
+                  <p className="text-brand-silver/40 text-[8px] md:text-[9px] uppercase tracking-widest">{testimonial.role}</p>
                 </div>
               </div>
             </article>

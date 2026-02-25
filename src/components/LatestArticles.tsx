@@ -7,8 +7,8 @@ export function LatestArticles() {
     const articles = getAllArticles().slice(0, 3);
 
     return (
-        <section aria-label="Latest articles" className="py-28 bg-brand-black text-brand-white border-t border-brand-silver/5">
-            <div className="container mx-auto px-6 max-w-6xl">
+        <section aria-label="Latest articles" className="py-14 md:py-28 bg-brand-black text-brand-white border-t border-brand-silver/5">
+            <div className="container mx-auto px-5 md:px-6 max-w-6xl">
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
                     <div className="max-w-xl">
                         <motion.p

@@ -11,7 +11,7 @@ export function Diagnostic() {
   const savings = tearOffCost - coatingCost;
 
   return (
-    <section aria-label="ROI Calculator" className="py-24 bg-brand-black text-brand-white relative overflow-hidden border-t border-brand-silver/5">
+    <section aria-label="ROI Calculator" className="py-14 md:py-24 bg-brand-black text-brand-white relative overflow-hidden border-t border-brand-silver/5">
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
           <motion.div
@@ -48,7 +48,7 @@ export function Diagnostic() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="glass-panel p-8 md:p-10 rounded-2xl relative overflow-hidden"
+            className="glass-panel p-6 md:p-10 rounded-2xl relative overflow-hidden"
           >
             <div className="relative mb-8">
               <label htmlFor="sqft-range" className="block text-sm font-semibold tracking-wider text-brand-silver/50 uppercase mb-5 flex justify-between items-end">

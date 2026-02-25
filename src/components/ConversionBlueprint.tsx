@@ -30,7 +30,7 @@ function AnimatedCounter({ value, suffix, inView }: { value: number, suffix: str
   }, [inView, value]);
 
   return (
-    <span className="font-display text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-brand-white tabular-nums">
+    <span className="font-display text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight text-brand-white tabular-nums">
       {count.toLocaleString()}{suffix}
     </span>
   );
@@ -41,9 +41,9 @@ export default function WhyChooseUs() {
   const isInView = useInView(ref, { once: true, margin: "-20%" });
 
   return (
-    <section aria-label="Company statistics" className="py-28 bg-brand-black text-brand-white relative overflow-hidden border-t border-brand-silver/5">
+    <section aria-label="Company statistics" className="py-14 md:py-28 bg-brand-black text-brand-white relative overflow-hidden border-t border-brand-silver/5">
       <div ref={ref} className="container mx-auto px-6 relative z-10 max-w-6xl">
-        <div className="text-center max-w-2xl mx-auto mb-20">
+        <div className="text-center max-w-2xl mx-auto mb-10 md:mb-20">
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -74,7 +74,7 @@ export default function WhyChooseUs() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8 lg:gap-10">
           {stats.map((stat, i) => (
             <motion.div
               key={i}

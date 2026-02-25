@@ -36,7 +36,7 @@ function ExpertiseCard({ item, index }: { item: typeof expertiseItems[0], index:
     const isEven = index % 2 === 0;
 
     return (
-        <div ref={ref} className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-stretch gap-10 lg:gap-20 mb-24`}>
+        <div ref={ref} className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-stretch gap-7 lg:gap-20 mb-14 md:mb-24`}>
             <motion.div
                 initial={{ opacity: 0, x: isEven ? -40 : 40 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -93,11 +93,11 @@ function ExpertiseCard({ item, index }: { item: typeof expertiseItems[0], index:
 
 export function ExpertiseGallery() {
     return (
-        <section id="expertise" aria-label="Our expertise" className="py-24 bg-brand-black text-brand-white overflow-hidden relative border-t border-brand-silver/5">
-            <SectionSettle className="container mx-auto px-6 max-w-6xl">
-                <div className="max-w-2xl mb-20">
+        <section id="expertise" aria-label="Our expertise" className="py-14 md:py-24 bg-brand-black text-brand-white overflow-hidden relative border-t border-brand-silver/5">
+            <SectionSettle className="container mx-auto px-5 md:px-6 max-w-6xl">
+                <div className="max-w-2xl mb-12 md:mb-20">
                     <BlurReveal delay={0}>
-                        <h2 className="font-display text-3xl lg:text-4xl font-medium tracking-tight mb-5 text-balance">
+                        <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-medium tracking-tight mb-4 text-balance">
                             <span className="block">Uncompromising Quality.</span>
                             <span className="text-brand-silver/50">Exceptional Execution.</span>
                         </h2>

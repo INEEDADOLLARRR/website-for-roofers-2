@@ -14,7 +14,7 @@ export function Footer() {
   return (
     <footer ref={ref} id="contact" className="bg-brand-black text-brand-white relative overflow-hidden">
       {/* CTA Section */}
-      <div className="relative min-h-[70vh] flex items-center justify-center overflow-hidden rounded-t-[2rem]">
+      <div className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden rounded-t-[2rem]">
         <motion.div style={{ y }} className="absolute inset-x-0 -top-[30%] -bottom-[30%] z-0">
           <img
             src="https://picsum.photos/seed/footer-cta/1920/1080"
@@ -37,7 +37,7 @@ export function Footer() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-7 text-balance">
+            <h2 className="font-display text-2xl md:text-4xl lg:text-6xl font-medium tracking-tight mb-5 text-balance">
               Experience gorgeous designs built on the industry's best frameworks.
             </h2>
             <p className="text-brand-silver/50 mb-10 max-w-xl mx-auto font-light text-sm leading-relaxed">
